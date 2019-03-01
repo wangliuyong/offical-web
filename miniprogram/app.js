@@ -1,7 +1,7 @@
 //app.js
 import dealData from './untils/data' 
 
-let {getCollection} =dealData
+let {getCollection} =dealVCData
 
 App({
   onLaunch: function () {
