@@ -1,6 +1,10 @@
 //index.js
 
-import onAdd from '../../untils/data'
+import dealData from '../../untils/data'
+
+let {onAdd}=dealData;
+
+
 const app = getApp()
 
 console.log('onAdd', onAdd)
