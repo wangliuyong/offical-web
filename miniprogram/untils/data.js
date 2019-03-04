@@ -1,21 +1,13 @@
-
 function getCollection(collection){
+
   const db = wx.cloud.database()
-  // 2. 构造查询语句
-  // collection 方法获取一个集合的引用
-  // where 方法传入一个对象，数据库返回集合中字段等于指定值的 JSON 文档。API 也支持高级的查询条件（比如大于、小于、in 等），具体见文档查看支持列表
-  // get 方法会触发网络请求，往数据库取数据
-  return db.collection(collection).where({
-    
-  }).get({
-    success(res) {
-      // 输出 [{ "title": "The Catcher in the Rye", ... }]
-      console.log('db---------------', res)
-      return res
-    }
+
+  return db.collection(collection).get().then(res => {
+    // res.data 是一个包含集合中有权限访问的所有记录的数据，不超过 20 条
+    //console.log(res.data)
+    return res.data
   })
 }
-
 
 
 function onAdd(collection, data = {}) {

@@ -2,7 +2,6 @@
   "pages": [
     "pages/index/index",
     "pages/admin/index",
-    "pages/service/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
     "pages/databaseGuide/databaseGuide",
@@ -16,20 +15,5 @@
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "安徽科技学院",
     "navigationBarTextStyle": "black"
-  },
-  "tabBar": {
-    "list": [{
-        "pagePath": "pages/index/index",
-        "text": "首页"
-      },
-      {
-        "pagePath": "pages/admin/index",
-        "text": "日志"
-      },
-       {
-         "pagePath": "pages/service/index",
-         "text": "日志"
-       }
-    ]
   }
 }

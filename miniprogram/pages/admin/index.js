@@ -8,7 +8,7 @@ let {
 
 const app = getApp()
 
-console.log('onAdd', onAdd)
+// console.log('onAdd', onAdd)
 
 Page({
   data: {
