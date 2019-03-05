@@ -21,7 +21,21 @@ Page({
     autoplay: true,
     interval: 5000,
     duration: 1000,
-    current: 'homepage'
+    current: 'homepage',
+    visible1: true,
+    actions1: [
+        {
+            name: '选项1',
+        },
+        {
+            name: '选项2'
+        },
+        {
+            name: '去分享',
+            icon: 'share',
+            openType: 'share'
+        }
+    ]
   },
 
   onLoad: function () {
