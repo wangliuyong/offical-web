@@ -10,7 +10,7 @@
     </swiper>
   </view>
   <view class="index-munue">
-    <i-tab-bar current="{{ current }}" color="#f759ab" bindchange="handleChange">
+    <i-tab-bar current="{{ current_munue }}" color="#f759ab" bindchange="handleChange">
       <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="公司简介"></i-tab-bar-item>
       <i-tab-bar-item key="group" icon="group" current-icon="group_fill" title="我们的业务"></i-tab-bar-item>
       <i-tab-bar-item key="remind" icon="remind" current-icon="remind_fill" title="通知"></i-tab-bar-item>
@@ -19,14 +19,30 @@
   </view>
 
 
-  <view class="s555hit_contact">
-    <i-action-sheet visible="{{ visible1 }}" actions="{{ actions1 }}" show-cancel bind:cancel="handleCancel1" bind:click="handleClickItem1" />
+  <scroll-view
+    class="content"
+    scroll-y
+    style="height: 700rpx;width:744rpx;"
+    bindscrolltoupper="upper"
+    bindscrolltolower="lower"
+    bindscroll="scroll"
+    scroll-into-view="{{toView}}"
+    scroll-top="{{scrollTop}}"
+  >
+
+  
+  
+  
+  
+  </scroll-view>
+
+
+  <view class="shit_contact">
+    <i-action-sheet visible="{{ visible }}" actions="{{ actions }}" show-cancel bind:cancel="handleCancel1" bind:click="handleClickItem1" />
   </view>
-
-
   <button open-type='contact' class="server_button"></button>
   <view class="tab-bar">
-    <i-tab-bar current="{{ current }}" bindchange="handleChange" fixed="true">
+    <i-tab-bar current="{{ current_tabbar }}" bindchange="handleChange" fixed="true">
       <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
       <i-tab-bar-item key="mobilephone_fill" icon="mobilephone_fill" current-icon="mobilephone_fill" title="拨打联系"></i-tab-bar-item>
       <i-tab-bar-item key="customerservice_fill" icon="customerservice_fill" current-icon="customerservice_fill" title="在线沟通"></i-tab-bar-item>

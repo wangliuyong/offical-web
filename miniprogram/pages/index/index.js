@@ -21,19 +21,14 @@ Page({
     autoplay: true,
     interval: 5000,
     duration: 1000,
-    current: 'homepage',
-    visible1: true,
-    actions1: [
+    current_tabbar: 'homepage',
+    visible: false,
+    actions: [
         {
-            name: '选项1',
+            name: '18355093647',
         },
         {
-            name: '选项2'
-        },
-        {
-            name: '去分享',
-            icon: 'share',
-            openType: 'share'
+            name: '呼叫'
         }
     ]
   },
@@ -45,6 +40,14 @@ Page({
     this.setData({
       current: detail.key
     });
+
+    console.log(detail)
+
+    if (detail.key === 'mobilephone_fill'){
+      this.setData({
+        visible:true
+      })
+    }
   },
   //封装的函数
   getSlides(slide) {
@@ -63,5 +66,14 @@ Page({
     }).catch((err) => {
 
     });
+  },
+  handleClickItem1(e){
+    let that=this;
+    wx.makePhoneCall({
+      phoneNumber: that.data.actions[0].name // 仅为示例，并非真实的电话号码
+    })
+  },
+  handleCancel1(){
+    this.setData({visible:false})
   }
 })
