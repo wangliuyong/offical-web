@@ -1,15 +1,4 @@
 //app.js
-import dealData from './untils/data'
-import getSlide from './untils/getSlide'
-
-
-
-let {
-  getCollection
-} = dealData
-
-
-
 App({
   onLaunch: function () {
 

@@ -1,10 +1,31 @@
 <!-- index.wxml -->
 <view class="index-container">
-  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <block wx:for="{{slide}}"  wx:key="index">
-      <swiper-item>
-        <image src="{{item.tempFileURL}}" class="slide-image" width="355" height="150" />
-      </swiper-item>
-    </block>
-  </swiper>
+  <view class="index-swiper">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{slide}}" wx:key="index">
+        <swiper-item>
+          <image src="{{item.tempFileURL}}" class="slide-image" mode="scaleToFill" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class="index-munue">
+    <i-tab-bar current="{{ current }}" color="#f759ab" bindchange="handleChange">
+      <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="公司简介"></i-tab-bar-item>
+      <i-tab-bar-item key="group" icon="group" current-icon="group_fill" title="我们的业务"></i-tab-bar-item>
+      <i-tab-bar-item key="remind" icon="remind" current-icon="remind_fill" title="通知"></i-tab-bar-item>
+      <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" title="我的"></i-tab-bar-item>
+    </i-tab-bar>
+  </view>
+
+  <button open-type='contact' class="server_button"></button>
+
+  <view class="tab-bar">
+    <i-tab-bar current="{{ current }}" bindchange="handleChange" fixed="true">
+      <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
+      <i-tab-bar-item key="mobilephone_fill" icon="mobilephone_fill" current-icon="mobilephone_fill" title="拨打联系"></i-tab-bar-item>
+      <i-tab-bar-item key="customerservice_fill" icon="customerservice_fill" current-icon="customerservice_fill" title="在线沟通"></i-tab-bar-item>
+    </i-tab-bar>
+  </view>
 </view>

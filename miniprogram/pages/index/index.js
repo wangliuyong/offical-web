@@ -16,19 +16,25 @@ const app = getApp()
 
 Page({
   data: {
-    slide:[],
+    slide: [],
     indicatorDots: true,
     autoplay: true,
     interval: 5000,
-    duration: 1000
+    duration: 1000,
+    current: 'homepage'
   },
 
-  onLoad: function() {
+  onLoad: function () {
     this.getSlides(app.globalData.slide)
+  },
+  handleChange({detail}) {
+    this.setData({
+      current: detail.key
+    });
   },
   //封装的函数
   getSlides(slide) {
-    let that=this;
+    let that = this;
     getCollection('slide').then((result) => {
       //console.log('result', result)
       let arr = result.map((item) => {
@@ -36,7 +42,7 @@ Page({
       })
       getSlide(arr).then((data) => {
         that.setData({
-          slide:data
+          slide: data
         })
       })
 
