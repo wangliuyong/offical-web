@@ -1,10 +1,11 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/admin/index"
+    "pages/admin/index",
+    "pages/detail/index"
   ],
   "window": {
-    "backgroundColor": "#F6F6F6",
+    "backgroundColor": "#000000",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "365 Express",

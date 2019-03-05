@@ -17,26 +17,11 @@
       <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" title="我的"></i-tab-bar-item>
     </i-tab-bar>
   </view>
-
-
-  <scroll-view
-    class="content"
-    scroll-y
-    style="height: 700rpx;width:744rpx;"
-    bindscrolltoupper="upper"
-    bindscrolltolower="lower"
-    bindscroll="scroll"
-    scroll-into-view="{{toView}}"
-    scroll-top="{{scrollTop}}"
-  >
-
-  
-  
-  
-  
+  <scroll-view class="content" scroll-y style="height: 700rpx;width:744rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <i-card  i-class="card_content"  full="true" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+      <view slot="content">内容不错</view>
+    </i-card>
   </scroll-view>
-
-
   <view class="shit_contact">
     <i-action-sheet visible="{{ visible }}" actions="{{ actions }}" show-cancel bind:cancel="handleCancel1" bind:click="handleClickItem1" />
   </view>

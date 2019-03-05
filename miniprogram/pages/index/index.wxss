@@ -7,6 +7,11 @@ page {
   justify-content: flex-start;
 }
 
+.index-container{
+  height: 100%;
+  background: #F0F8FF;
+}
+
 .index-swiper{
   width: 100%;
 }
@@ -33,4 +38,8 @@ page {
 
 .server_button::after {
   border: none;
+}
+
+.card_content{
+  margin-top: 20px;
 }
